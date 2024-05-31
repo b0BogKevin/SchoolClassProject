@@ -33,11 +33,11 @@ namespace SchoolClassProject.Repo
             bool equalPay = false;
             foreach (SchoolClass c in classes) 
             {
-                if (c.NumberOfStudents * c.MonthlyFee == maxPaid)
+                if (c.MonthlyFee == maxPaid)
                     equalPay = true;
-                if (c.NumberOfStudents * c.MonthlyFee > maxPaid)
+                if (c.MonthlyFee > maxPaid)
                 {
-                    maxPaid = c.NumberOfStudents * c.MonthlyFee;
+                    maxPaid = c.MonthlyFee;
                     MostPaidClass = $"{c.Year}.{c.SchoolType}";
                     equalPay = false;
                 }

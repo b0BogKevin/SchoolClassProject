@@ -18,7 +18,7 @@ namespace SchoolClassProject.Model.Tests
             SchoolClassRepo repo = new SchoolClassRepo();
             List<SchoolClass> classes = new List<SchoolClass>
             {
-            new SchoolClass(9,'a', 100,3),
+            new SchoolClass(9,'a', 300,3),
             new SchoolClass(10, 'b', 300, 1),
             };
             string actual = repo.MostPaidSchoolClass(classes);
@@ -49,7 +49,7 @@ namespace SchoolClassProject.Model.Tests
             List<SchoolClass> classes = new List<SchoolClass>
             {
             new SchoolClass(9,'a', 300, 3),
-            new SchoolClass(10,'b', 300, 5),
+            new SchoolClass(10,'b', 400, 5),
             };
             string actual = repo.MostPaidSchoolClass(classes);
 
@@ -66,11 +66,11 @@ namespace SchoolClassProject.Model.Tests
             new SchoolClass(9,'a', 300,4),
             new SchoolClass(10, 'b', 400, 3),
             new SchoolClass(10, 'c', 1300, 1),
-            new SchoolClass(11, 'b', 10000, 0),
+            new SchoolClass(11, 'b', 10000, 2),
             };
             string actual = repo.MostPaidSchoolClass(classes);
 
-            string expected = "10.c";
+            string expected = "11.b";
             Assert.AreEqual(expected, actual);
         }
     }
